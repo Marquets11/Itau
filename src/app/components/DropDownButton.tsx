@@ -27,8 +27,11 @@ export default function DropDownButton({
 			<div className="hidden absolute top-12 peer-focus:flex flex-col min-w-36 bg-opacity-90 bg-blue-700 rounded-lg">
 				{optionsDropDown &&
 					optionsDropDown.length > 0 &&
-					optionsDropDown.map((option) => (
-						<button className="p-2 text-start font-bold bg-white bg-opacity-0 hover:bg-opacity-20 rounded-md duration-200">
+					optionsDropDown.map((option, i) => (
+						<button
+							key={i}
+							className="p-2 text-start font-bold bg-white bg-opacity-0 hover:bg-opacity-20 rounded-md duration-200"
+						>
 							{option}
 						</button>
 					))}
