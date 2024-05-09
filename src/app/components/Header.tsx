@@ -9,10 +9,25 @@ export default function Header() {
 		<div className="bg-orange-itau text-white flex flex-wrap gap-5 justify-center lg:justify-between pl-20">
 			<div className="flex py-3">
 				<Image src={Logo} alt="Logo" className="w-10" />
-				<nav className="flex ml-12 gap-10 max-sm:hidden">
-					<DropDownButton buttonName="Para você" />
-					<DropDownButton buttonName="Para empresas" />
-					<DropDownButton buttonName="Serviços" />
+				<nav className="flex items-center ml-12 gap-10 max-sm:hidden">
+					<DropDownButton
+						buttonName="Para você"
+						optionsDropDown={["Opção 01", "Opção 02", "Opção 03"]}
+					/>
+					<DropDownButton
+						buttonName="Para empresas"
+						optionsDropDown={["Opção 01", "Opção 02"]}
+					/>
+					<DropDownButton
+						buttonName="Serviços"
+						optionsDropDown={[
+							"Opção 01",
+							"Opção 02",
+							"Opção 03",
+							"Opção 04",
+							"Opção 05",
+						]}
+					/>
 					<DropDownButton buttonName="Ajuda" />
 				</nav>
 			</div>
