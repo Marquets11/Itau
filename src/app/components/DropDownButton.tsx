@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import DropArrow from "@/assets/arrow-down.svg";
+import { motion } from "framer-motion";
 
 export default function DropDownButton({
 	buttonName,
@@ -24,7 +27,12 @@ export default function DropDownButton({
 					/>
 				)}
 			</button>
-			<div className="hidden absolute top-12 peer-focus:flex flex-col min-w-36 bg-opacity-90 bg-blue-700 rounded-lg">
+			<motion.div
+				className="hidden absolute top-12 peer-focus:flex flex-col min-w-36 bg-opacity-90 bg-blue-700 rounded-lg"
+				initial={{ opacity: 0, y: -50 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				exit={{ opacity: 0, y: -50 }}
+			>
 				{optionsDropDown &&
 					optionsDropDown.length > 0 &&
 					optionsDropDown.map((option, i) => (
@@ -35,7 +43,7 @@ export default function DropDownButton({
 							{option}
 						</button>
 					))}
-			</div>
+			</motion.div>
 		</div>
 	);
 }
