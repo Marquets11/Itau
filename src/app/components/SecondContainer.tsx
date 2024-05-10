@@ -13,7 +13,7 @@ export default function SecondContainer() {
 	return (
 		<div className="min-h-screen bg-orange-100 py-2">
 			<main className="grid lg:grid-cols-2 lg:grid-rows-1">
-				<section className="flex flex-col lg:justify-center gap-5 px-20 py-10">
+				<section className="flex flex-col lg:justify-center gap-5 px-3 sm:px-20 py-10">
 					<motion.h2
 						className="font-bold text-orange-itau uppercase text-sm"
 						initial={{ opacity: 0, x: -50 }}
@@ -72,7 +72,7 @@ export default function SecondContainer() {
 					exit={{ opacity: 0, x: 100 }}
 					whileHover={{ scale: 1.1 }}
 					whileTap={{ scale: 0.9 }}
-					transition={{ duration: 0.2, damping: 10, stiffness: 260 }}
+					transition={{ duration: 0.9, damping: 10, stiffness: 260 }}
 				>
 					<Image src={Cellphone} alt="cellphone-image" width={250} />
 				</motion.div>

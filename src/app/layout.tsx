@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import { SidebarProvider } from "./hooks/SidebarContext";
 
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={lato.className}>
-				<Header />
-				{children}
-			</body>
+			<SidebarProvider>
+				<body className={lato.className}>
+					<Header />
+					{children}
+				</body>
+			</SidebarProvider>
 		</html>
 	);
 }

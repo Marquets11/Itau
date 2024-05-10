@@ -9,8 +9,8 @@ export default function FirstContainer() {
 	return (
 		<div className="bg-bg-hero bg-no-repeat text-white">
 			<main className="grid lg:grid-cols-2 lg:grid-rows-1">
-				<section className="flex flex-col lg:justify-center gap-5 px-20 py-10">
-					<h1 className="text-7xl font-bold">
+				<section className="flex flex-col lg:justify-center gap-5 px-3 sm:px-20 py-10">
+					<h1 className="text-5xl sm:text-7xl font-bold">
 						Tenha seu banco na palma da mão.
 					</h1>
 					<p className="text-justify">

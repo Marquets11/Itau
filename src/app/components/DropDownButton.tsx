@@ -12,9 +12,9 @@ export default function DropDownButton({
 	optionsDropDown?: string[];
 }) {
 	return (
-		<div>
+		<div className="relative">
 			<button
-				className={`group relative ${
+				className={`group ${
 					optionsDropDown && optionsDropDown.length > 0 && "peer"
 				}`}
 			>
@@ -28,7 +28,7 @@ export default function DropDownButton({
 				)}
 			</button>
 			<motion.div
-				className="hidden absolute top-12 peer-focus:flex flex-col min-w-36 bg-opacity-90 bg-blue-700 rounded-lg"
+				className="hidden sm:absolute top-6 peer-focus:flex flex-col min-w-36 bg-opacity-90 bg-blue-700 rounded-lg"
 				initial={{ opacity: 0, y: -50 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				exit={{ opacity: 0, y: -50 }}
