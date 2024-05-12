@@ -25,7 +25,7 @@ export default function FirstContainer() {
 							delayToAppear={0.5}
 						/>
 					</nav>
-					<button className="flex items-center gap-2 mt-20 group w-44 opacity-60 hover:opacity-100">
+					<button className="flex items-center gap-2 mt-20 group w-44 opacity-55 hover:opacity-100">
 						<Image
 							src={DownArrow}
 							alt="down-arrow"

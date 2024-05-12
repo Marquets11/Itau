@@ -7,13 +7,13 @@ import DropDownButton from "./DropDownButton";
 import { useSidebarContext } from "../hooks/SidebarContext";
 
 export default function Sidebar() {
-	const { setIsMenuOpen } = useSidebarContext();
+	const { isMenuOpen, setIsMenuOpen } = useSidebarContext();
 
 	return (
-		<div className="w-full h-full fixed top-0 z-10 backdrop-blur-sm flex">
+		<div className={`w-full h-full fixed top-0 z-10 backdrop-blur-sm flex`}>
 			<div className="flex-1" onClick={() => setIsMenuOpen(false)}></div>
 			<motion.div
-				className="absolute right-0 top-0 h-full w-60 p-5 bg-blue-700 shadow-2xl shadow-black"
+				className={`absolute right-0 top-0 h-full w-60 p-5 bg-blue-700 shadow-2xl shadow-black`}
 				initial={{ opacity: 0, x: 200 }}
 				whileInView={{ opacity: 1, x: 0 }}
 				exit={{ opacity: 0, x: 200 }}

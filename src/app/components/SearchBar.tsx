@@ -13,7 +13,7 @@ export default function SearchBar() {
 			</button>
 			<input
 				type="text"
-				className="w-full bg-transparent outline-none placeholder:text-white hover:cursor-pointer peer"
+				className="w-full bg-transparent outline-none placeholder:text-white peer"
 				placeholder="Buscar"
 			/>
 		</form>
